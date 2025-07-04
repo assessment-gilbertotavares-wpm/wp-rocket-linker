@@ -1,9 +1,6 @@
-Repository template for our packages
+# WP Rocket Linker
 
-# Usage
-When creating a new repository for a package or a plugin, select this repository as the template. It will initialize the new repository with all the structure & files contained in the template.
-
-# Get started
+## Get started
 - Have a mysql DB ready and a user.
 - Have `svn` installed.
 - Run `composer install`
@@ -12,12 +9,11 @@ When creating a new repository for a package or a plugin, select this repository
 - Run `composer phpcs`
 - You can install the plugin on your website.
 
-# Content
+## Content
 * `bin/install-wp-tests.sh`: installer for WordPress tests suite
 * `.editorconfig`: config file for your IDE to follow our coding standards
 * `.gitattributes`: list of directories & files excluded from export
 * `.gitignore`: list of directories & files excluded from versioning
-* `.travis.yml`: Travis-CI configuration file
 * `composer.json`: Base composer file to customize for the project
 * `LICENSE`: License file using GPLv3
 * `phpcs.xml`: Base PHP Code Sniffer configuration file to customize for the project

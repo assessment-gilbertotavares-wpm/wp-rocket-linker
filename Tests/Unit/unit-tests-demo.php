@@ -1,28 +1,27 @@
 <?php
 /**
- *  Implements the Unit test set for the Webplan data class.
+ * Unit tests for basic plugin behaviors or scaffolding checks.
  *
- * @package     TO FILL
- * @since       TO FILL
- * @author      Mathieu Lamiot
+ * @package     WP_Rocket_Linker
+ * @author      WP Media
+ * @copyright   2025 WP Media
  * @license     GPL-2.0-or-later
  */
-namespace ROCKET_WP_CRAWLER;
+namespace WP_Rocket_Linker;
 
 use WPMedia\PHPUnit\Unit\TestCase;
 
-
 /**
- * Unit test set for the Webplan data class.
+ * Unit test demo to validate the test suite.
  */
-class Rocket_Wpc_Demo_Test extends TestCase {
+class Rocket_Wpl_Demo_Test extends TestCase {
 
-    /**
-     * Always pass.
-     */
-    public function testAlwaysPass() {
+	/**
+	 * It should always pass (test suite scaffold verification).
+	 */
+	public function testAlwaysPass() {
 
 		$this->assertTrue(true);
 
-    }
+	}
 }

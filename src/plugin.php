@@ -2,35 +2,35 @@
 /**
  * Plugin main class
  *
- * @package     TO FILL
- * @since       TO FILL
- * @author      Mathieu Lamiot
+ * @package     WP_Rocket_Linker
+ * @author      WP Media
+ * @copyright   2025 WP Media
  * @license     GPL-2.0-or-later
  */
 
-namespace ROCKET_WP_CRAWLER;
+namespace WP_Rocket_Linker;
 
 /**
  * Main plugin class. It manages initialization, install, and activations.
  */
-class Rocket_Wpc_Plugin_Class {
+class Rocket_Wpl_Plugin_Class {
 	/**
-	 * Manages plugin initialization
+	 * Manages plugin initialization.
 	 *
 	 * @return void
 	 */
 	public function __construct() {
 
 		// Register plugin lifecycle hooks.
-		register_deactivation_hook( ROCKET_CRWL_PLUGIN_FILENAME, array( $this, 'wpc_deactivate' ) );
+		register_deactivation_hook( ROCKET_LNKR_PLUGIN_FILENAME, array( $this, 'wpl_deactivate' ) );
 	}
 
 	/**
-	 * Handles plugin activation:
+	 * Handles plugin activation.
 	 *
 	 * @return void
 	 */
-	public static function wpc_activate() {
+	public static function wpl_activate() {
 		// Security checks.
 		if ( ! current_user_can( 'activate_plugins' ) ) {
 			return;
@@ -40,11 +40,11 @@ class Rocket_Wpc_Plugin_Class {
 	}
 
 	/**
-	 * Handles plugin deactivation
+	 * Handles plugin deactivation.
 	 *
 	 * @return void
 	 */
-	public function wpc_deactivate() {
+	public function wpl_deactivate() {
 		// Security checks.
 		if ( ! current_user_can( 'activate_plugins' ) ) {
 			return;
@@ -54,11 +54,11 @@ class Rocket_Wpc_Plugin_Class {
 	}
 
 	/**
-	 * Handles plugin uninstall
+	 * Handles plugin uninstall.
 	 *
 	 * @return void
 	 */
-	public static function wpc_uninstall() {
+	public static function wpl_uninstall() {
 
 		// Security checks.
 		if ( ! current_user_can( 'activate_plugins' ) ) {

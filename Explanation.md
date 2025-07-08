@@ -88,3 +88,17 @@ We needed to track, on each homepage visit, which links were visible **above the
 * Each record lists the links visible above the fold at page load.
 * The interface is accessible via the **“Linker Entries”** menu.
 * The endpoint is secured and time zones are handled consistently.
+
+> **Improvement proposals not directly related to the plugin:**
+>
+> 1. **Update the `package-template`**
+>
+>   * Review the template and, optionally, add a `wp‑cli scaffold` command to automatically replace `FILL` parameters based on the official repository.
+>
+> 2. **Enhance the `engineering‑handbook` (Managing Custom Tables in WordPress with BerlinDB section)**
+>
+>   * Document the usage of columns schema as a class (derived from `Schema`).
+>   * Treat `item_shape` as a class name (derived from `Row`), rather than an array of columns.
+>   * Define `item_name` as a `string`, also represented by a class derived from `Row`.
+>
+>   > These handbook recommendation were developed considering the `berlindb/core` package v2.x and **have not** been tested on the `wp-media/berlindb-core` fork.

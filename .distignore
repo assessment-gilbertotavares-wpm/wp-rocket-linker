@@ -1,0 +1,34 @@
+# Development files
+composer.lock
+package.json
+package-lock.json
+phpcs.xml.dist
+Explanation.md
+README.md
+LICENSE
+
+# Scripts and development tools
+bin/
+Tests/
+assets/js-src/
+
+# Configs and examples
+*.dist
+*.md
+*.xml
+
+# Git metadata
+.git/
+.gitignore
+.gitattributes
+
+# Node modules and build cache
+node_modules/
+npm-debug.log
+.env
+
+# Temporary and OS-specific files
+*.log
+*.zip
+.DS_Store
+Thumbs.db

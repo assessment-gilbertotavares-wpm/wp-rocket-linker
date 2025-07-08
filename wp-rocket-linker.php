@@ -10,7 +10,7 @@
  * @wordpress-plugin
  * Plugin Name:  WP Rocket Linker
  * Plugin URI:   https://github.com/assessment-gilbertotavares-wpm/wp-rocket-linker
- * Version:      1.0.0-dev
+ * Version:      1.0.0
  * Description:  Capture and analyze which homepage links are viewed above the fold over the past 7 days.
  * Author:       WP Media
  * Contributors: Gilberto Tavares (camaleaun)

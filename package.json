@@ -1,0 +1,11 @@
+{
+	"devDependencies": {
+		"@wordpress/scripts": "^30.19.0"
+	},
+	"scripts": {
+		"start": "wp-scripts start track-links.js --source-path=assets/js-src --output-path=assets/js --webpack-no-externals",
+		"build": "wp-scripts build track-links.js --source-path=assets/js-src --output-path=assets/js --webpack-no-externals",
+		"format": "wp-scripts format",
+		"lint:js": "wp-scripts lint-js"
+	}
+}

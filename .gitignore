@@ -1,5 +1,8 @@
-/vendor/*
+/vendor
 /Tests/env/local/
 *.cache
 composer.lock
 .DS_Store
+package-lock.json
+/node_modules
+/assets/js

@@ -25,6 +25,8 @@
 
 namespace WP_Rocket_Linker;
 
+use WP_Rocket_Linker\Plugin as Rocket_Wpl_Plugin_Class;
+
 define( 'ROCKET_LNKR_PLUGIN_FILENAME', __FILE__ ); // Filename of the plugin, including the file.
 
 if ( ! defined( 'ABSPATH' ) ) { // If WordPress is not loaded.
@@ -32,7 +34,6 @@ if ( ! defined( 'ABSPATH' ) ) { // If WordPress is not loaded.
 }
 
 // Load the dependencies installed through composer.
-require_once __DIR__ . '/src/plugin.php';
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/src/support/exceptions.php';
 
@@ -47,5 +48,6 @@ function wpl_linker_plugin_init() {
 }
 add_action( 'plugins_loaded', __NAMESPACE__ . '\wpl_linker_plugin_init' );
 
-register_activation_hook( __FILE__, __NAMESPACE__ . '\Rocket_Wpl_Plugin_Class::wpl_activate' );
-register_uninstall_hook( __FILE__, __NAMESPACE__ . '\Rocket_Wpl_Plugin_Class::wpl_uninstall' );
+register_activation_hook( __FILE__, array( Rocket_Wpl_Plugin_Class::class, 'wpl_activate' ) );
+register_uninstall_hook( __FILE__, array( Rocket_Wpl_Plugin_Class::class, 'wpl_uninstall' ) );
+add_action( 'wp_rocket_linker_cleanup_daily', array( Rocket_Wpl_Plugin_Class::class, 'daily_cleanup' ) );
